@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Luxe - Premium Perfumes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/globals.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Aroma Luxe</h1>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#shop" class="nav-link" data-en="Shop" data-ar="تسوق">Shop</a></li>
+                    <li><a href="#about" class="nav-link" data-en="About" data-ar="حول">About</a></li>
+                    <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="اتصل">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Night Mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="language-toggle" id="langToggle" title="اللغة">EN / AR</button>
+                <button class="cart-btn" id="cartBtn">
+                    <span class="cart-icon">🛍️</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-link" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#shop" class="mobile-link" data-en="Shop" data-ar="تسوق">Shop</a>
+        <a href="#about" class="mobile-link" data-en="About" data-ar="حول">About</a>
+        <a href="#contact" class="mobile-link" data-en="Contact" data-ar="اتصل">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2 class="hero-title" data-en="Discover Your Signature Scent" data-ar="اكتشف رائحتك المميزة">Discover Your Signature Scent</h2>
+            <p class="hero-subtitle" data-en="Luxury perfumes crafted for the modern individual" data-ar="عطور فاخرة مصنوعة للشخص المعاصر">Luxury perfumes crafted for the modern individual</p>
+            <button class="btn btn-primary" data-en="Explore Collection" data-ar="استكشف المجموعة">Explore Collection</button>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="shop">
+        <div class="container">
+            <h2 class="section-title" data-en="Featured Collection" data-ar="المجموعة المميزة">Featured Collection</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-price">
+                        <span class="price-label" data-en="Price:" data-ar="السعر:">Price:</span>
+                        <span id="modalPrice" class="price"></span>
+                    </div>
+                    <div class="modal-actions">
+                        <input type="number" id="quantity" min="1" value="1" class="quantity-input">
+                        <button class="btn btn-primary" id="addToCartBtn" data-en="Add to Cart" data-ar="أضف إلى السلة">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 data-en="Shopping Cart" data-ar="سلة التسوق">Shopping Cart</h3>
+            <button class="close-btn" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-message" data-en="Your cart is empty" data-ar="سلتك فارغة">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-en="Total:" data-ar="الإجمالي:">Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-checkout" data-en="Checkout" data-ar="الدفع">Checkout</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About Aroma Luxe" data-ar="حول أروما لوكس">About Aroma Luxe</h2>
+            <p class="about-text" data-en="We craft premium perfumes using the finest ingredients from around the world. Each fragrance tells a story of elegance, sophistication, and timeless beauty." data-ar="نحن نصنع عطورًا فاخرة باستخدام أفضل المكونات من جميع أنحاء العالم. تروي كل رائحة قصة من الأناقة والرقي والجمال الخالد.">We craft premium perfumes using the finest ingredients from around the world. Each fragrance tells a story of elegance, sophistication, and timeless beauty.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="About" data-ar="حول">About</h3>
+                    <ul>
+                        <li><a href="#" data-en="Our Story" data-ar="قصتنا">Our Story</a></li>
+                        <li><a href="#" data-en="Ingredients" data-ar="المكونات">Ingredients</a></li>
+                        <li><a href="#" data-en="Sustainability" data-ar="الاستدامة">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-en="Customer Service" data-ar="خدمة العملاء">Customer Service</h3>
+                    <ul>
+                        <li><a href="#" data-en="Shipping" data-ar="الشحن">Shipping</a></li>
+                        <li><a href="#" data-en="Returns" data-ar="الإرجاع">Returns</a></li>
+                        <li><a href="#" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-en="Contact" data-ar="اتصل">Contact</h3>
+                    <p data-en="Email: info@aromaluxe.com" data-ar="البريد الإلكتروني: info@aromaluxe.com">Email: info@aromaluxe.com</p>
+                    <p data-en="Phone: +1 (555) 123-4567" data-ar="الهاتف: +1 (555) 123-4567">Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2024 Aroma Luxe. All rights reserved." data-ar="© 2024 أروما لوكس. جميع الحقوق محفوظة.">© 2024 Aroma Luxe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
